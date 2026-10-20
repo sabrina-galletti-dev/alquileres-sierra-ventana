@@ -49,6 +49,10 @@ figure {
     max-width: 1440px;
     margin-inline: auto;
 
+    display : grid ;
+    grid: repeat(4 , auto ) / repeat( 12 , 1fr ) ;
+
+
     font-size: clamp( 100% , .74rem + .25vw , 25px ) ;
 
     background-color: var(--c_grey100);
@@ -57,6 +61,9 @@ figure {
 
 /* 5. Header / Hero Banner (Imagen de Cerro Ventana) */
 .Header {
+    grid-row: 1 / 2 ;
+    grid-column: 1 / 13 ;
+
     width: 100%;
     height: 380px;
     background-image: url('./images/hero-banner.jpeg'); /* O tu ruta/URL de imagen */
@@ -115,24 +122,40 @@ figure {
 
 /* 6. Aside / Menú de Navegación */
 .Aside {
+    grid-row: 2 / 3 ;
+    grid-column:  1 / 13 ;
+
     background-color: #1a2f4c; /* Fondo azul oscuro como la referencia */
     padding: 0.8rem 2rem;
-}
+    
+    & .navbar {
+        display: flex; /* Coloca los elementos en línea horizontal */
+        flex-direction: row ;
+        justify-content: center; /* Los centra en la pantalla */
+        align-items: center;
+        gap: 2rem; /* Espacio entre cada enlace */
+        list-style: none; /* Quita las viñetas/puntos negros */
+        
+        & .navbar__menu {
+            display: flex ;
+            flex-direction: row ;
+            gap : 2rem ;
 
-.Aside__nav ul {
-    display: flex; /* Coloca los elementos en línea horizontal */
-    justify-content: center; /* Los centra en la pantalla */
-    align-items: center;
-    gap: 2rem; /* Espacio entre cada enlace */
-    list-style: none; /* Quita las viñetas/puntos negros */
-}
+            & .navbar__menu__item {
+                list-style-type: none;
 
-.Aside__nav a {
-    color: var(--c_white);
-    text-decoration: none; /* Quita el subrayado por defecto */
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+                & .navbar__menu__item--link {
+                    text-decoration: none; /* Quita el subrayado por defecto */
+                    color: var(--c_white);
+                    font-weight: 500;
+                    font-size: 1rem;
+                    transition: color 0.3s ease;
+                }
+            
+            }
+        }
+
+    }
 }
 
 .Aside__nav a:hover {
@@ -141,6 +164,9 @@ figure {
 
 /* 7. Main y Secciones Anidadas */
 .Main {
+    grid-row: 3 / 4 ;
+    grid-column: 1 / 13 ;
+
     padding: 2rem;
 
     &__title {
@@ -196,6 +222,9 @@ figure {
 
 /* 8. Footer */
 .Footer {
+    grid-row: 4 / 5;
+    grid-column: 1 / 13 ;
+
     text-align: center;
     padding: 1.5rem;
     background-color: var(--c_black);
