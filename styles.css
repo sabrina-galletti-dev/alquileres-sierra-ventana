@@ -30,6 +30,18 @@ html {
     font-family: system-ui, -apple-system, sans-serif;
 }
 
+figure {
+    display : grid ;
+    place-content : center ;
+    
+    & > img {
+        width : 100% ;
+        height : auto ;
+        object-fit : cover ;
+        object-position : center ;
+    }
+}
+
 /* 4. Estructura Body */
 .Body {
     max-width: 1440px;
