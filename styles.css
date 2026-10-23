@@ -108,6 +108,16 @@ figure {
     position: relative;
 }
 
+
+@media (max-width: 768px) {
+    .Header_title {
+        font-size: 1.5rem;
+    }
+    .Header_subtitle {
+        font-size: 0.85rem;
+    }
+}
+
 /* La barrita naranja / dorada decorativa debajo del subtítulo */
 .Header__subtitle::after {
     content: '';
@@ -215,6 +225,13 @@ figure {
             &:nth-child(2) {
                 border-top: 4px solid var(--c_green);
             }
+            &:nth-child(3) {
+            border-top: 4px solid var(--c_purple00);
+            }
+
+            &:nth-child(4) {
+            border-top: 4px solid var(--c_green);
+            }
         }
     }
 }
@@ -257,5 +274,27 @@ figure {
                 }
             }
         }
+    }
+}
+
+.card__header--avatar--img {
+    height: 185px;
+    width: 100%;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .Header__title {
+        font-size: 1.5rem;
+    }
+    .Header__subtitle {
+        font-size: 0.85rem;
+    }
+    /* Solución para el menú desbordado en móvil */
+    .navbar__menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.5rem;
     }
 }
