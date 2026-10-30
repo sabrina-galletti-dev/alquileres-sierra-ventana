@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hostels - Alquileres Temporales - Sierra de la Ventana</title>
+    <title>Cabañas - Alquileres Temporales</title>
 
-    <!-- Etiqueta de estilos al final del head -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- Ruta corregida subiendo un nivel con ../ para encontrar el CSS -->
+    <link rel="stylesheet" href="../styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
 </head>
 
@@ -21,13 +21,13 @@
         </div>
     </header>
 
-    <!-- Aside (Menú / Navegación actualizado) -->
+    <!-- Menú de Navegación (con rutas adaptadas dentro de pages) -->
     <aside class="Aside">
         <nav class="navbar">
             <menu class="navbar__menu">
                 <li class="navbar__menu__item">
-                    <a class="navbar__menu__item--link" href="index.html">
-                        Inicio
+                    <a class="navbar__menu__item--link" href="../index.html">
+                        🏠 Volver al Inicio
                     </a>
                 </li>
                 <li class="navbar__menu__item">
@@ -59,14 +59,13 @@
         </nav>
     </aside>
 
-    <!-- Main (Estructura general) -->
+    <!-- Main -->
     <main class="Main">
-        <h2 class="Main__title">Hostels</h2>
+        <h2 class="Main__title">Sección de Hostels</h2>
 
         <section class="section" id="js_cardsContainer">
-            <!-- Acá más adelante podemos hacer que muestre solo los hostels -->
+            <!-- Acá se cargarán dinámicamente las tarjetas con JavaScript -->
         </section>
-
     </main>
 
     <!-- Footer -->
@@ -74,7 +73,9 @@
         <p class="Footer__paragraph">&copy; 2026 Alquileres Temporales - Sierra de la Ventana</p>
     </footer>
 
-    <script src="./App.js"></script>
+    <!-- Scripts con ruta hacia la raíz -->
+    <script src="../src/data.js"></script>
+    <script src="../App.js"></script>
 </body>
 
 </html>
