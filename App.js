@@ -31,6 +31,7 @@ function renderCards(dataToRender) {
                 <p>${card.paragraph}</p>
                 <p class="card__direction">📍 <strong>Dirección:</strong> ${card.direction}</p>
                 <p class="card__phone">📞 <strong>Teléfono:</strong> ${card.phone}</p>
+                ${card.linkWeb ? `<p class="card__web"><a href="${card.linkWeb}" target="_blank" rel="noopener noreferrer" style="color: #0066cc; font-weight: bold; text-decoration: underline;">🔗 Visitar web oficial de turismo</a></p>` : ''}
                 <button class="btn-favorito" data-title="${card.title}">⭐ Guardar Favorito</button>
             </main>
         `;
@@ -70,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCards(filtrarAlojamientos('complejos'));
     } else if (path.includes('hostels.html')) {
         renderCards(filtrarAlojamientos('hostels'));
+    } else if (path.includes('informes.html')) {
+        renderCards(filtrarAlojamientos('informes'));
     } else {
         renderCards(CARD_DATA);
     }

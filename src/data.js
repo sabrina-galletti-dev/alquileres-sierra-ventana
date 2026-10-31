@@ -126,7 +126,18 @@ const CARD_DATA = [
         paragraph: "Especialmente pensado para amantes del trekking y la montaña.",
         direction: "Los Cerros 102",
         phone: "+54 9 291 666-9900"
-    }
+    },
+    {
+        id: "informes",
+        category: "Informe Turístico",
+        image: "images/Complejo Nagahuel.jpeg",
+        alttext: "Informe Turístico",
+        title: "Guía y Estado de Servicios",
+        paragraph: "Conocé el Cerro Ventana, los arroyos locales y los mejores senderos de trekking.",
+        direction: "Oficina de Turismo Central",
+        phone: "+54 9 291 494-0000",
+        linkWeb: "https://sierrasdelaventana.tur.ar/" // <--- El link externo de contacto/sitio oficial
+}
 ];
 
 export default CARD_DATA;
