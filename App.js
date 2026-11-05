@@ -77,3 +77,35 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCards(CARD_DATA);
     }
 });
+
+// Búsqueda por palabras clave totalmente opcional y fluida
+const searchInput = document.getElementById('js_searchInput');
+const searchMessage = document.getElementById('js_searchMessage');
+
+if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const textoBusqueda = e.target.value.trim().toLowerCase();
+        
+        // Si está vacío, muestra todo normalmente
+        if (textoBusqueda === "") {
+            searchMessage.textContent = ""; // O un texto guía sutil si querés
+            renderCards(CARD_DATA);
+        } 
+        // Si escribe algo (1 letra o más), filtra al instante
+        else {
+            const resultados = CARD_DATA.filter(item => 
+                item.title.toLowerCase().includes(textoBusqueda) ||
+                item.paragraph.toLowerCase().includes(textoBusqueda) ||
+                item.category.toLowerCase().includes(textoBusqueda)
+            );
+
+            if (resultados.length === 0) {
+                searchMessage.textContent = `No se encontraron alojamientos para "${textoBusqueda}".`;
+                renderCards([]); 
+            } else {
+                searchMessage.textContent = `Se encontraron ${resultados.length} resultado(s):`;
+                renderCards(resultados);
+            }
+        }
+    });
+}

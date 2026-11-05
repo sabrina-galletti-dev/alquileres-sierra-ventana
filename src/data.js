@@ -7,7 +7,7 @@ const CARD_DATA = [
         image: "images/Complejo Nagahuel.jpeg",
         alttext: "Complejo Nagahuel",
         title: "Complejo Nagahuel",
-        paragraph: "Servicios integrales, pileta y grandes parques para familias.",
+        paragraph: "Servicios integrales, piscinas y grandes parques para familias.",
         direction: "Av. San Martín 150",
         phone: "+54 9 291 456-7890"
     },

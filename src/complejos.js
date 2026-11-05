@@ -5,6 +5,6 @@ const COMPLEJOS_DATA = [
         image: "images/Complejo Nagahuel.jpeg",
         alttext: "Complejo Nagahuel",
         title: "Complejo Nagahuel",
-        paragraph: "Servicios integrales, pileta y grandes parques para familias."
+        paragraph: "Servicios integrales, piscinas y grandes parques para familias."
     }
 ];
