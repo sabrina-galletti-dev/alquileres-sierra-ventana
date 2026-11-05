@@ -132,7 +132,7 @@ const CARD_DATA = [
         category: "Informe Turístico",
         image: "images/Informes Turísticos.jpg",
         alttext: "Informe Turístico",
-        title: "Contactanos y recibí toda la información que necesites para tu viaje a Sierras de la Ventana.",
+        title: "Contactanos y recibí toda la información que necesites para tu viaje a Sierra de la Ventana.",
         paragraph: "Conocé el Cerro Ventana, los arroyos locales y los mejores senderos de trekking.",
         direction: "Oficina de Turismo Central",
         phone: "+54 9 291 494-0000",
