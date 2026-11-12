@@ -129,7 +129,7 @@ const CARD_DATA = [
     },
     {
         id: "informes",
-        category: "Informe Turístico",
+        category: "Informe",
         image: "images/Informes Turísticos.jpg",
         alttext: "Informe Turístico",
         title: "Contactanos y recibí toda la información que necesites para tu viaje a Sierra de la Ventana.",

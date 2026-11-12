@@ -13,8 +13,8 @@ function renderCards(dataToRender) {
     dataToRender.forEach(card => {
         const article = document.createElement('article');
         article.classList.add('card');
-        article.id = card.id;
         
+
         const finalImageSrc = imagePathPrefix + card.image;
 
         article.innerHTML = `
@@ -46,7 +46,14 @@ function filtrarAlojamientos(categoriaBuscada) {
     if (!categoriaBuscada) {
         return CARD_DATA;
     }
-    return CARD_DATA.filter(item => item.id === categoriaBuscada);
+    const normalizar = (texto) => texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+    
+    const busquedaLimpia = normalizar(categoriaBuscada);
+
+    return CARD_DATA.filter(item => {
+        const categoriaLimpia = normalizar(item.category);
+        return categoriaLimpia.includes(busquedaLimpia) || busquedaLimpia.includes(categoriaLimpia);
+    });
 }
 
 function activarEventosFavoritos() {
