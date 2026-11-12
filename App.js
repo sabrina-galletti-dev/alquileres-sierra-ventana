@@ -25,7 +25,7 @@ function renderCards(dataToRender) {
                         alt="${card.alttext}">
                 </figure>
             </header>
-            <main>
+            <div class="card__body">
                 <span class="card__category" style="display: block; font-size: 0.85rem; text-transform: uppercase; color: #666; margin-bottom: 4px; font-weight: 600;">${card.category}</span>
                 <h3>${card.title}</h3>
                 <p>${card.paragraph}</p>
@@ -33,7 +33,7 @@ function renderCards(dataToRender) {
                 <p class="card__phone">📞 <strong>Teléfono:</strong> ${card.phone}</p>
                 ${card.linkWeb ? `<p class="card__web"><a href="${card.linkWeb}" target="_blank" rel="noopener noreferrer" style="color: #0066cc; font-weight: bold; text-decoration: underline;">🔗 Visitar web oficial de turismo</a></p>` : ''}
                 <button class="btn-favorito" data-title="${card.title}">⭐ Guardar Favorito</button>
-            </main>
+            </div>
         `;
         
         cardContainer.appendChild(article);
