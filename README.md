@@ -40,5 +40,4 @@ Dado que el proyecto implementa **Módulos de JavaScript (`type="module"`)**, es
 * **Pre-entrega 2:** Completada (Integración con HTML, DOM dinámico, eventos, validaciones y persistencia con `localStorage`).
 
 ## 🔗 Enlaces
-* **Repositorio de GitHub:** (https://github.com/tu-usuario/alquileres-sierra-ventana-sabri-pre_entrega2) *(actualizar con tu link)*
-* **Sitio Publicado:** [Ver sitio online](https://tu-usuario.github.io/alquileres-sierra-ventana-sabri-pre_entrega2) *(actualizar con tu link de GitHub Pages)*
+* **Repositorio de GitHub:** (https://github.com/sabrina-galletti-dev/alquileres-sierra-ventana) 
