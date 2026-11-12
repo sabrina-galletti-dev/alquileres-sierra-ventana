@@ -136,7 +136,7 @@ const CARD_DATA = [
         paragraph: "Conocé el Cerro Ventana, los arroyos locales y los mejores senderos de trekking.",
         direction: "Oficina de Turismo Central",
         phone: "+54 9 291 494-0000",
-        linkWeb: "https://sierrasdelaventana.tur.ar/" // <--- El link externo de contacto/sitio oficial
+        linkWeb: "https://sierrasdelaventana.tur.ar/donde-dormir/sierra-de-la-ventana-%F0%9F%9B%8C/",
 }
 ];
 
