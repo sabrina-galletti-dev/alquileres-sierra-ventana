@@ -294,3 +294,103 @@ figure {
         padding: 0.5rem;
     }
 }
+* Bloque principal del Clima */
+.clima {
+  background: linear-gradient(135deg, #f4f8f6 0%, #e6f0ec 100%);
+  border: 1px solid #c2dcd1;
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin: 25px 0;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(44, 94, 79, 0.08);
+  font-family: inherit;
+  transition: transform 0.2s ease;
+}
+
+.clima:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(44, 94, 79, 0.12);
+}
+
+/* Elementos principales - Adaptable para mobile */
+.clima__principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap; /* Permite que baje la temperatura o el icono si el celu es muy chico */
+}
+
+.clima__icono {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.clima__ubicacion {
+  flex-grow: 1;
+  min-width: 140px; /* Evita que se comprima de más */
+}
+
+.clima__titulo {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e3f35;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.clima__descripcion {
+  margin: 2px 0 0;
+  color: #555;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.clima__temperatura {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2c5e4f;
+  line-height: 1;
+}
+
+/* Detalles inferiores */
+.clima__detalles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid #d0e4db;
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.clima__dato {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.clima__mensaje {
+  text-align: center;
+  margin: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Modificadores */
+.clima__dato--alerta {
+  background: #fef3c7;
+  color: #b45309;
+  font-weight: 600;
+  border: 1px solid #fde68a;
+}
+
+.clima__mensaje--error {
+  color: #b91c1c;
+  font-weight: 500;
+}

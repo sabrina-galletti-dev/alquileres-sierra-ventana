@@ -1,4 +1,5 @@
 // App.js
+import { cargarClimaSierra } from "./src/clima.js";
 import CARD_DATA from './src/data.js';
 
 function renderCards(dataToRender) {
@@ -116,3 +117,6 @@ if (searchInput) {
         }
     });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  cargarClimaSierra();
+});
